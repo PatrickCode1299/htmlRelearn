@@ -53,21 +53,30 @@
             .explore-more:hover{
                 border:1px solid rgb(255,176,31);
             }
+            .site-description{
+                flex:1;
+            }
             .site-description > h1{
                 color:white;
                 text-transform: uppercase;
                 word-wrap:break-word;
-                line-height:25px;
+                line-height:50px;
+                font-size:45px;
+                margin-bottom:0px;
             }
             .site-description > p{
+                color:white;
                 word-wrap:break-word;
                 font-family: sans-serif;
                 line-height:25px;
             }
             .intro-section{
-                margin-top:10%;
-                padding-left:40px;
-                padding-right:40px;
+                margin-top:5%;
+                padding-left:50px;
+                padding-right:50px;
+                display:flex;
+                justify-content:space-around;
+                flex-direction:row;
             }
             .transparent-btn{
                 background-color: rgba(255, 177, 31, 0.233);
@@ -79,6 +88,47 @@
                 border:none;
                 cursor: pointer;
                 font-size:12px;
+            }
+            .object{
+                flex:3;
+                margin-left:20px;
+            }
+            .object-tag{
+                background-color: rgb(255, 246, 210);
+                height:300px;
+                width:400px;
+                position: absolute;
+                top:300px;
+                z-index: -1;
+            }
+            .specimen{
+                position:absolute;
+                top:100px;
+            }
+            .object-tag2{
+                width:200px;
+                height:150px;
+                padding:10px 10px;
+                background-color:rgb(255, 233, 183);
+                position: absolute;
+                bottom:42px;
+                left:45%;
+            }
+            .btn-brown{
+                background-color: rgb(68, 22, 0);
+                border:none;
+                color:white;
+                font-weight:bold;
+                padding:10px 10px;
+                border-radius:20px; 
+                border:none;
+                cursor: pointer;
+                font-size:12px;
+            }
+            .object-tag2 > p{
+                font-size:15px;
+                font-weight:bold;
+                
             }
         </style>
     </head>
@@ -109,8 +159,11 @@
             <div class="object">
                 <img class="specimen" src="./cofee_bag.png" alt="cofee_bag" />
                 <div class="object-tag">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi assumenda ipsam officia? Inventore pariatur ea odit labore error eum, 
-                    dolorem autem, earum dolores vitae rem. In aliquid eligendi nihil!
+                
+                </div>
+                <div class="object-tag2">
+                    <button class="btn-brown">100% Available</button>
+                  <p> All Types of Cofee Strain </p>
                 </div>
             </div>
         </section>
