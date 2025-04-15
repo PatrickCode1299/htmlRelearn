@@ -6,11 +6,85 @@
             body{
                 background-color:rgb(33, 85, 33);
             }
+            nav{
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: space-between;
+                color: white;
+            }
+            nav > *{
+                flex:1;
+            }
+            .site-logo{
+                margin-left:10px;
+                margin-top:10px;
+                font-weight:bold;
+                font-size:22px;
+                font-family: Arial, Helvetica, sans-serif;
+             
+            }
+            ul{
+              list-style: none;
+            }
+            ul > li{
+                display: inline;
+                margin-left:20px;
+                margin-right:20px;
+            }
+            span {
+                margin-top:20px;
+                
+                margin-left:auto;
+            }
+            span > li{
+                display: inline;
+                margin-left:20px;
+                margin-right:20px;
+            }
+            .explore-more{
+                background-color: rgb(255, 176, 31);
+                color:white;
+                font-weight:bold;
+                padding:10px 10px;
+              /*  border-radius:20px; **/
+                border:none;
+                cursor: pointer;
+            }
+            .explore-more:hover{
+                border:1px solid rgb(255,176,31);
+            }
+            .site-description > h1{
+                color:white;
+                text-transform: uppercase;
+                word-wrap:break-word;
+                line-height:25px;
+            }
+            .site-description > p{
+                word-wrap:break-word;
+                font-family: sans-serif;
+                line-height:25px;
+            }
+            .intro-section{
+                margin-top:10%;
+                padding-left:40px;
+                padding-right:40px;
+            }
+            .transparent-btn{
+                background-color: rgba(255, 177, 31, 0.233);
+                border:none;
+                color:white;
+                font-weight:bold;
+                padding:10px 10px;
+              /*  border-radius:20px; **/
+                border:none;
+                cursor: pointer;
+                font-size:12px;
+            }
         </style>
     </head>
     <body>
         <nav>
-            <span>Phocinky</span>
+            <span class="site-logo">Ph<b style="color:orange;">o</b>cinky</span>
             <ul>
                 <li>Find Store</li>
                 <li>Buy a cofee</li>
@@ -23,6 +97,22 @@
             <li>Register</li>
             </span>
         </nav>
-
+        <section class="intro-section">
+            <div class="site-description">
+            <button class="transparent-btn">Cofee Shop</button>
+            <h1>We Are Human & Cofee</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, perspiciatis architecto non iste sequi tenetur quaerat assumenda a laudantium, corrupti 
+                quisquam doloremque recusandae! Consequuntur voluptatibus aut facere tempora assumenda laborum.
+            </p>
+            <button class="explore-more">Explore More</button>
+            </div>
+            <div class="object">
+                <img class="specimen" src="./cofee_bag.png" alt="cofee_bag" />
+                <div class="object-tag">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint sequi assumenda ipsam officia? Inventore pariatur ea odit labore error eum, 
+                    dolorem autem, earum dolores vitae rem. In aliquid eligendi nihil!
+                </div>
+            </div>
+        </section>
     </body>
 </html>
