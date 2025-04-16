@@ -3,13 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Medical Test Today </title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <title>Buy a Coffee today..</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
   <style>
-    body{
-      padding:0;
-      margin:0;
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Poppins, sans-serif;
       background-color: rgb(80, 80, 236);
+    }
+
+    .signup-form {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 40px 50px;
+      min-height: 500px;
+      flex-wrap: wrap;
+    }
+
+    .signup-form > div {
+      flex: 1;
+      padding: 20px;
+      min-width: 300px;
+    }
+
+    .signup-icons-list {
+      background-color: rgb(2, 2, 185);
+      border-top-left-radius: 20px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .icon-text-holder {
+      margin-bottom: 30px;
+    }
+
+    .icon-text-holder i {
+      font-size: 24px;
+      margin-right: 10px;
+      color: white;
+    }
+
+    .icon-text-holder span {
+      display: block;
+      margin-top: 5px;
+    }
+
+    .signup-actual-form {
+      background-color: white;
+      border-top-right-radius: 20px;
+      color: black;
+    }
+
+    .signup-form-holder label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .multiple-flex-inputs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .multiple-flex-inputs > div {
+      width: calc(50% - 10px);
+    }
+
+    .multiple-flex-inputs input,
+    .non-flex-input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(192, 192, 192, 0.473);
+      border: none;
+      font-size: 14px;
+    }
+
+    .non-flex-input {
+      margin-top: 10px;
+    }
+
+    .flex-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .signup-btn-md {
+      background-color: rgb(0, 0, 160);
+      color: white;
+      border: none;
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .signup-form {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .signup-icons-list,
+      .signup-actual-form {
+        border-radius: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+
+      .multiple-flex-inputs > div {
+        width: 100%;
+      }
+
+      .flex-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .signup-btn-md {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -18,61 +143,57 @@
     <div class="signup-icons-list">
       <div class="icon-text">
         <div class="icon-text-holder">
-        <span>Icon</span>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magnam ut officiis qui. Exercitationem similique eos delectus dolore s
-          sint perferendis dolorum non optio iusto quam quos dolorem, deleniti, inventore soluta.
-        </span>
-      </div>
-      <div class="icon-text-holder"></div>
-        <span>Icon</span>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magnam ut officiis qui. Exercitationem similique eos delectus dolore s
-          sint perferendis dolorum non optio iusto quam quos dolorem, deleniti, inventore soluta.
-        </span>
+          <i class="fas fa-flask"></i>
+          <span>State-of-the-art lab facilities and services.</span>
         </div>
-        <div class="icon-text-holder"></div>
-        <span>Icon</span>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem magnam ut officiis qui. Exercitationem similique eos delectus dolore s
-          sint perferendis dolorum non optio iusto quam quos dolorem, deleniti, inventore soluta.
-        </span>
+        <div class="icon-text-holder">
+          <i class="fas fa-user-md"></i>
+          <span>Experienced staff to deliver accurate results.</span>
+        </div>
+        <div class="icon-text-holder">
+          <i class="fas fa-clock"></i>
+          <span>Fast turnaround time for test reports.</span>
         </div>
       </div>
     </div>
+
     <div class="signup-actual-form">
       <form method="POST" class="signup-form-holder">
-        <input />
+        <h2>Sign Up as <b style="color:rgb(2, 2, 255);">Diagonistic Lab</b></h2>
+        
+        <label>Lab Name</label>
+        <input class="non-flex-input" type="text" />
+
         <div class="multiple-flex-inputs">
           <div>
-          <label>Lab Name</label>
-          <input type="text" />
-        </div>
-         <div>
-          <label>Your Name</label>
-          <input type="text" />
-        </div>
+            <label>Your Name</label>
+            <input type="text" placeholder="your name:" />
+          </div>
           <div>
-          <label>Your role</label>
-          <input type="text" />
+            <label>Your Role</label>
+            <input type="text" placeholder="your role:" />
+          </div>
+          <div>
+            <label>Daily Pathology Reports</label>
+            <input type="text" placeholder="number of reports" />
+          </div>
+          <div>
+            <label>Daily Radiology Reports</label>
+            <input type="text" placeholder="number of reports" />
+          </div>
         </div>
+
         <div>
-          <label>Daily pathology Reports</label>
-          <input type="text" />
+          <label>Mobile Number</label>
+          <input class="non-flex-input" type="phone" placeholder="phone number:" />
         </div>
-          <div>
-          <label>Daily Radiology Reports</label>
-          <input type="text" />
-        </div>
-        </div>
-        <input type="phone" />
-        <input />
+
         <div class="flex-wrapper">
-        <p class="agreement"><input type="checkbox" /> I agree with <b>Terms and Conditions and Privacy Policies of evoke</b></p>
-        <button class="signup-btn-md">Sign Up</button>
+          <p class="agreement"><input type="checkbox" /> I agree with <b>Terms and Conditions and Privacy Policies of Evoke</b></p>
+          <button class="signup-btn-md">Sign Up</button>
         </div>
       </form>
     </div>
-    
   </section>
-
-
 </body>
 </html>
