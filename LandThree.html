@@ -14,78 +14,190 @@
       font-family: Poppins, sans-serif;
       background-color: rgba(255, 247, 247, 0.822);
     }
-    .food-and-title{
-        display:flex;
-        justify-content:space-around;
-        align-items: center;
-        flex-wrap:wrap;
+  
+    nav {
+      padding: 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
     }
-    .first-header{
-        font-size:25px;
-        font-weight:bold;
-        word-wrap:break-word;
+  
+    .food-and-title {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 2rem;
     }
-    .first-header > h1{
-        word-break:break-all;
-        word-wrap:break-word;
-        font-weight:bold;
+  
+    .first-header {
+      font-size: 25px;
+      font-weight: bold;
+      max-width: 500px;
     }
-    .view-btn{
-        color:white;
-        border:none;
-        border-top-right-radius:10px;
-        border-top-left-radius:20px;
-        border-bottom-left-radius:20px;
-        background-color:rgb(0, 0, 0);
-        padding-top:10px;
-        padding-bottom:10px;
-        padding-left:10px;
-        padding-right:10px;
-        width: 150px;
+  
+    .first-header h1 {
+      word-break: break-word;
+      font-weight: bold;
+      font-size: 2rem;
     }
-        .plate {
-    transition: transform 5s ease-in-out;
-    transform-style: preserve-3d;
+  
+    .view-btn {
+      color: white;
+      border: none;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      background-color: rgb(0, 0, 0);
+      padding: 10px;
+      width: 150px;
+      margin-top: 1rem;
     }
-
+  
+    .plate {
+      transition: transform 5s ease-in-out;
+      transform-style: preserve-3d;
+      max-width: 300px;
+      width: 100%;
+    }
+  
     .plate:hover {
-    transform: rotate3d(1, 1, 1, 360deg);
+      transform: rotate3d(1, 1, 1, 360deg);
     }
-    .small-plate{
-        width:100px;
-        height:100px;
-        position: absolute;
-        top:0px;
-        border:2px solid rgba(201, 171, 0, 0.815);
-        border-radius:50px;
+  
+    .small-plate {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 2px solid rgba(201, 171, 0, 0.815);
+      border-radius: 50%;
     }
-    .second-header-with-card{
-        display: flex;
-        flex-direction:row;
-        position: relative;
-        justify-content:center;
-        flex:1;
-       
+  
+    .second-header-with-card {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      position: relative;
+      flex: 1;
+      margin-bottom: 2rem;
     }
-    .second-header-with-card > .card{
-        border-radius:20px;
-        background-color:rgba(235, 235, 235, 0.938);
-        padding:10px 10px;
-        width:150px;
-        font-size:12px;
-        font-weight:normal;
-        height:auto;
-        margin-right:20px;
-        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.082);
+  
+    .second-header-with-card .card {
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.664);
+      padding: 1rem;
+      width: 200px;
+      font-size: 14px;
+      position: relative;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 60px;
     }
-    .food-and-title-card{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        margin:20px;
-        flex-wrap: wrap;
+  
+    .card p {
+      margin-top: 60px;
+    }
+  
+    .food-and-title-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  
+    .food-and-title-card > div {
+      flex: 1;
+      min-width: 280px;
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+    .bottom-plate {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.bottom-plate.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+  
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .food-and-title {
+        flex-direction: column;
+        text-align: center;
+      }
+  
+      .second-header-with-card {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .card {
+        width: 90%;
+      }
+  
+      .first-header h1 {
+        font-size: 1.6rem;
+      }
+  
+      .view-btn {
+        width: auto;
+      }
+  
+      h2 {
+        font-size: 1.25rem;
+      }
+  
+      .small-plate {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .first-header h1 {
+        font-size: 1.4rem;
+      }
+  
+      h2 {
+        font-size: 1.1rem;
+      }
+  
+      p {
+        font-size: 13px;
+      }
+  
+      .plate {
+        max-width: 200px;
+      }
+  
+      .card {
+        margin-top: 50px;
+      }
     }
   </style>
+  
 </head>
 <body>
     <nav>
@@ -126,7 +238,7 @@
              </div>
     </div>
   </section>
-  <section class="food-and-title-card">
+  <section class="food-and-title-card" style="margin:100px;">
     <div class="second-header-with-card" style="flex:2;">
      <div>
         <h2>Our team of registered nurses and skilled healthcare professionals provide in-home nursing.</h2>
@@ -138,8 +250,27 @@
      </div>
     </div>
     <div style="flex:1;">
-        <img src="plate-food.png" style="width:100%; height:auto;" alt="food-plate"/>
+        <img src="plate-food.png" class="bottom-plate" style="width:100%; height:auto;" alt="food-plate"/>
     </div>
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bottomPlate = document.querySelector('.bottom-plate');
+        const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        bottomPlate.classList.add('show');
+        observer.unobserve(bottomPlate);
+        }
+    });
+    }, {
+    threshold: 0.2
+    });
+
+  
+      observer.observe(bottomPlate);
+    });
+  </script>
+  
 </body>
 </html>
