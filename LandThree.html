@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Medical Test Today </title>
+  <title>Food Court </title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 
@@ -14,11 +14,117 @@
       font-family: Poppins, sans-serif;
       background-color: rgba(255, 247, 247, 0.822);
     }
+    .food-and-title{
+        display:flex;
+        justify-content:space-around;
+        align-items: center;
+        flex-wrap:wrap;
+    }
+    .first-header{
+        font-size:25px;
+        font-weight:bold;
+        word-wrap:break-word;
+    }
+    .first-header > h1{
+        word-break:break-all;
+        word-wrap:break-word;
+        font-weight:bold;
+    }
+    .view-btn{
+        color:white;
+        border:none;
+        border-top-right-radius:10px;
+        border-top-left-radius:20px;
+        border-bottom-left-radius:20px;
+        background-color:rgb(0, 0, 0);
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-left:10px;
+        padding-right:10px;
+        width: 150px;
+    }
+        .plate {
+    transition: transform 5s ease-in-out;
+    transform-style: preserve-3d;
+    }
 
-   
+    .plate:hover {
+    transform: rotate3d(1, 1, 1, 360deg);
+    }
+    .small-plate{
+        width:auto;
+        height:100px;
+        position: absolute;
+        top:0px;
+        border:2px solid rgba(201, 171, 0, 0.815);
+        border-radius:50px;
+    }
+    .second-header-with-card{
+        display: flex;
+        flex-direction:row;
+        position: relative;
+        justify-content:center;
+        flex:1;
+       
+    }
+    .second-header-with-card > .card{
+        border-radius:20px;
+        background-color:rgba(235, 235, 235, 0.938);
+        padding:10px 10px;
+        width:150px;
+        font-size:12px;
+        font-weight:normal;
+        height:auto;
+        margin-right:20px;
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.082);
+    }
+    .food-and-title-card{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin:20px;
+        flex-wrap: wrap;
+    }
   </style>
 </head>
 <body>
-  
+    <nav>
+        <span>Title</span>
+    </nav>
+  <section class="food-and-title">
+    <div class="first-header">
+        <h1>Delicious <br /> Food is Waiting <br /> 
+        For you.</h1>
+        <button class="view-btn">View Menu &rarr;
+        </button>
+    </div>
+    <div>
+        <img src="plate-food.png" class="plate" alt="food-plate"/>
+    </div>
+  </section>
+  <section class="food-and-title-card">
+    <div class="second-header-with-card">
+        <div class="card">
+        <img src="plate-food.png" class="small-plate" alt="food-plate"/>
+
+        <p style="margin-top:50%;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis alias voluptate eius, 
+            optio quisquam dolores iusto consectetur quo officia 
+         </p>
+        </div>
+        <div class="card">
+            <img src="plate-food.png" class="small-plate" alt="food-plate"/>
+            <p style="margin-top:50%;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis alias voluptate eius, 
+                optio quisquam dolores iusto consectetur quo officia 
+</p>
+        </div>
+    </div>
+    <div style="flex:1;">
+        <h2>We have Delicious food Tasty food in town.</h2>
+        <p style="font-size:12px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus assumenda maxime eos magnam sapiente
+             sit at placeat autem, ab odio blanditiis dicta hic cum! 
+             Quasi placeat est numquam molestiae consequuntur!</p>
+             </div>
+    </div>
+  </section>
 </body>
 </html>
